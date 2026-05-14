@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "highset",
+  "main": "worker.js",
+  "compatibility_date": "2025-02-04",
+  "kv_namespaces": [
+    {
+      "binding": "BLEAU",
+      "id": "7c01d973651c40f2b0696078a610ba8a"
+    }
+  ],
+  "vars": {
+    "REFRESH_SECRET": "dein-geheimnis",
+    "VERIFY_TOKEN": "highset-public-v1"
+    // GROQ_KEY is already set as a secret in the Cloudflare dashboard
+  },
+  "triggers": {
+    "crons": ["*/20 * * * *"]
+  }
+}
